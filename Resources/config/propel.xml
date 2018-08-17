@@ -17,6 +17,10 @@
     </parameters>
 
     <services>
+        <prototype namespace="Propel\Bundle\PropelBundle\" resource="../../{Command}" exclude="../../Command/Phing.php">
+            <tag name="console.command" />
+        </prototype>
+
         <service id="propel.configuration" class="%propel.configuration.class%" public="true"/>
 
         <service id="propel.build_properties" class="%propel.build_properties.class%" />
